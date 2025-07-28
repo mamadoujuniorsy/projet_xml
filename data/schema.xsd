@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="platforme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="utilisateurs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="utilisateur" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nom" type="xs:string"/>
+                    <xs:element name="telephone" type="xs:string"/>
+                    <xs:element name="email" type="xs:string" minOccurs="0"/>
+                    <xs:element name="password" type="xs:string" minOccurs="0"/>
+                    <xs:element name="status" type="xs:string" minOccurs="0"/>
+                    <xs:element name="avatar" type="xs:string" minOccurs="0"/>
+                    <xs:element name="date_creation" type="xs:dateTime" minOccurs="0"/>
+                    <xs:element name="contacts" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="contact" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required"/>
+                              <xs:attribute name="date_ajout" type="xs:dateTime"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="groupes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="groupe" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nom" type="xs:string"/>
+                    <xs:element name="membre" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="messages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="message" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="expediteur" type="xs:string"/>
+                    <xs:element name="destinataire" type="xs:string"/>
+                    <xs:element name="contenu" type="xs:string"/>
+                    <xs:element name="date" type="xs:dateTime"/>
+                    <xs:element name="lu" type="xs:boolean" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platforme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <utilisateurs>
+    <utilisateur id="u1">
+      <nom>Admin</nom>
+      <telephone>+33 6 00 00 00 00</telephone>
+      <password>$2y$10$example.hash.here</password>
+      <status>En ligne</status>
+      <avatar>default.png</avatar>
+      <date_creation>2025-07-28T10:00:00+00:00</date_creation>
+      <contacts/>
+    </utilisateur>
+  <utilisateur id="u1753716703"><nom>Mamadou SY</nom><telephone>773815479</telephone><password>$2y$10$IXv2F6MbcdWa9aqcdIvjceR985y9i6l/rcsXAPoaxSIAEBDLPY57a</password><status>En ligne</status><avatar>default.png</avatar><date_creation>2025-07-28T15:31:43+00:00</date_creation><contacts/></utilisateur><utilisateur id="u1753716787"><nom>Ousseynou</nom><telephone>770000000</telephone><password>$2y$10$jjqZEQYyleks2ZCrDQQAWehMMH56kgyHA/2Q72vcO4G/p6c3MnUGG</password><status>En ligne</status><avatar>default.png</avatar><date_creation>2025-07-28T15:33:07+00:00</date_creation><contacts><contact id="u1753716703" date_ajout="2025-07-28T15:33:36+00:00"/></contacts></utilisateur></utilisateurs>
+  <groupes/>
+  <messages><message id="m1753716828"><expediteur>u1753716787</expediteur><destinataire>u1753716703</destinataire><contenu>salut</contenu><date>2025-07-28T15:33:48+00:00</date><lu>false</lu></message></messages>
+</platforme>
