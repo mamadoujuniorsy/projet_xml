@@ -42,7 +42,7 @@ if ($_POST) {
                         $newUser->addChild('telephone', htmlspecialchars($telephone));
                         $newUser->addChild('password', password_hash($password, PASSWORD_DEFAULT));
                         $newUser->addChild('status', 'En ligne');
-                        $newUser->addChild('avatar', 'default.png');
+                        $newUser->addChild('avatar', '');
                         $newUser->addChild('date_creation', date('c'));
                         
                         // Créer la section contacts pour ce nouvel utilisateur

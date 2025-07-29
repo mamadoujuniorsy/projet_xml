@@ -29,6 +29,18 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
+                    <xs:element name="blocked" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="blocked_user" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:attribute name="id" type="xs:string" use="required"/>
+                              <xs:attribute name="date_blocked" type="xs:dateTime"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
                   </xs:sequence>
                   <xs:attribute name="id" type="xs:string" use="required"/>
                 </xs:complexType>
@@ -68,6 +80,7 @@
                     <xs:element name="contenu" type="xs:string"/>
                     <xs:element name="date" type="xs:dateTime"/>
                     <xs:element name="lu" type="xs:boolean" minOccurs="0"/>
+                    <xs:element name="type" type="xs:string" minOccurs="0"/>
                   </xs:sequence>
                   <xs:attribute name="id" type="xs:string" use="required"/>
                 </xs:complexType>
